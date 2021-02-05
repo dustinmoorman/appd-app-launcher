@@ -1,0 +1,25 @@
+<monitor>
+    <name>AppDynamics App Launcher</name>
+    <type>managed</type>
+    <enabled>true</enabled>
+    <description>Launch a windows app and report success or failure</description>
+    <monitor-configuration></monitor-configuration>
+    <monitor-run-task>
+        <execution-style>periodic</execution-style> 
+        <execution-frequency-in-seconds>300</execution-frequency-in-seconds> 
+        <execution-timeout-in-secs>300</execution-timeout-in-secs>
+        <name>AppDynamicsAppLauncher</name>
+        <type>executable</type>
+        <task-arguments>
+        </task-arguments>
+        <variables>
+            <targets>
+                <target>C:\Windows\notepad.exe</target>
+            </targets>
+        </variables>
+        <executable-task>
+            <type>file</type>
+            <file os-type="windows">monitor.py</file>
+        </executable-task>
+    </monitor-run-task>
+</monitor>
