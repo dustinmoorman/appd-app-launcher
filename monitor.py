@@ -24,7 +24,7 @@ for app in targets:
     time.sleep(3)
     app.kill()
 
-    DEFAULT_METRIC_PREFIX="name=Custom Metrics|AppLauncher|" + appname + "|Launch Status,value=" + str(daysLeft.days)
+    DEFAULT_METRIC_PREFIX="name=Custom Metrics|AppLauncher|" + appname + "|Launch Status,value=1"
     print(DEFAULT_METRIC_PREFIX)
-  except:
-    pass
+  except Exception as e:
+    print(e)
